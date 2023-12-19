@@ -22,8 +22,7 @@ login: admin@cm.com
 password: P@ssword
 
 ## NOTE You can also apply at SaveChangesInterceptor
-![image](https://github.com/ganiputras/BlazorCurrentUser/assets/8809768/d1155fab-bd6a-4533-85bd-201ebbaf8329)
+![image](https://github.com/ganiputras/BlazorCurrentUser/assets/8809768/e9d6b393-6acb-4645-9c94-d59f8c6a47e5)
 
-![image](https://github.com/ganiputras/BlazorCurrentUser/assets/8809768/68f95bd8-97b9-4e69-a88b-799fec42666d)
 
 
