@@ -19,7 +19,7 @@ PM> Update-Database
 
 ## 5. Login
 login: admin@cm.com
-password: P@ssword
+password: P@ssw0rd
 
 ## NOTE You can also apply at SaveChangesInterceptor
 ![image](https://github.com/ganiputras/BlazorCurrentUser/assets/8809768/e9d6b393-6acb-4645-9c94-d59f8c6a47e5)
