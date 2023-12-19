@@ -1,0 +1,28 @@
+﻿@page "/auth"
+
+@using Microsoft.AspNetCore.Authorization
+@using WebApp.Ui.Services
+@inject ICurrentUserService UserService
+@attribute [Authorize]
+
+<PageTitle>Auth</PageTitle>
+
+<h1>You are authenticated</h1>
+
+<AuthorizeView>
+    Hello @context.User.Identity?.Name!
+
+    <p>
+        Company @UserService.CompanyId
+    </p>
+</AuthorizeView>
+
+
+@code
+{
+    protected override Task OnInitializedAsync()
+    {
+        var tenantId = UserService.TenantId;
+        return base.OnInitializedAsync();
+    }
+}
