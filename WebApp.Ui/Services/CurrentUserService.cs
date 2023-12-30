@@ -25,19 +25,16 @@ namespace WebApp.Ui.Services
 
         public void SetUser(ClaimsPrincipal user)
         {
-            if (_currentUser != null && _currentUser != user)
+            if (user.Identity != null)
             {
                 _currentUser = user;
-                UserId = _currentUser.GetUserId();
-                UserName = _currentUser.GetDisplayName();
-                DisplayName = _currentUser.GetDisplayName();
-                TenantId = _currentUser.GetTenantId();
-                CompanyId = _currentUser.GetCompanyId();
+                UserId = user.GetUserId();
+                UserName = user.GetDisplayName();
+                DisplayName = user.GetDisplayName();
+                TenantId = user.GetTenantId();
+                CompanyId = user.GetCompanyId();
+                IsAuthenticated = user.Identity.IsAuthenticated;
 
-                if (_currentUser.Identity is { IsAuthenticated: true })
-                {
-                    IsAuthenticated = _currentUser.Identity.IsAuthenticated;
-                }
             }
         }
     }
